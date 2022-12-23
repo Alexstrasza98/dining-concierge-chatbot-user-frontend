@@ -22,6 +22,8 @@ import {
 import { OktaAuth } from '@okta/okta-auth-js';
 
 import myAppConfig from './config/my-app-config';
+import { SavedRestaurantComponent } from './components/saved-restaurant/saved-restaurant.component';
+import { ReservationsComponent } from './components/reservations/reservations.component';
 
 const oktaConfig = myAppConfig.oidc;
 
@@ -42,7 +44,9 @@ const routes: Routes = [
     AppComponent,
 
     LoginComponent,
-    LoginStatusComponent
+    LoginStatusComponent,
+    SavedRestaurantComponent,
+    ReservationsComponent
   ],
   imports: [
     RouterModule.forRoot(routes),

@@ -12,9 +12,9 @@
 
       <div class="nav">
         <ul>
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Saved Restaurants</a></li>
-          <li><a href="#">Reservations</a></li>
+          <li><a href="#" (click)="current_content= 'profile'">Profile</a></li>
+          <li><a href="#" (click)="current_content= 'saved'">Saved Restaurants</a></li>
+          <li><a href="#" (click)="current_content= 'reserved'">Reservations</a></li>
         </ul>
       </div>
 
@@ -40,30 +40,12 @@
 
       <!-- MAIN CONTENT-->
       <router-outlet></router-outlet>
-
     </div>
 
   </div>
 
-  <div class="content">
-    <div class="saved-title">
-      <h1>Saved Restaurants</h1>
-    </div>
-    <ul class="saved-restaurant-list">
-      <li class="saved-restaurant-item" *ngFor="let saveResult of SaveList">
-        <div class="saved-restaurant-card">
-          <img src="{{saveResult.image_url}}" class="saved-thumbnail">
-          <div class="saved-restaurant-info">
-            <h2>{{saveResult.name}}</h2>
-            <p>Location: {{saveResult.location}}</p>
-            <p>Rating: {{saveResult.rate}}/5</p>
-            <p>Price: {{saveResult.price}}</p>
-          </div>
-        </div>
-      </li>
-    </ul>
-
-  </div>
+  <app-saved-restaurant *ngIf="current_content == 'saved'"></app-saved-restaurant>
+  <app-reservations *ngIf="current_content == 'reserved'"></app-reservations>
 </div>
 
 
