@@ -17,11 +17,22 @@ export class AppComponent implements OnInit {
         yelp_url: ''
     };
 
+    SaveList : Array<SaveType> = [{
+        businessId: '',
+        id : 0,
+        image_url: '',
+        location: '',
+        name: '',
+        price : '',
+        rate: 0,
+        yelp_url: ''
+    }];
+
     ngOnInit() {      
         // Simple GET request with response type <any>
 
         this.http.get<Array<SaveType>>('http://44.206.254.99:8080/save').subscribe(data => {
-            this.saveResult = data[0];
+            this.SaveList = data;
         })
     }
 }
