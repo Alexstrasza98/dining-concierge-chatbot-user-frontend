@@ -708,6 +708,14 @@ table.table.table-bordered th{
     margin-left:5px
 }
 
+.page-wrapper {
+    margin-bottom: 50px;
+}
+
+.nav {
+
+}
+
 /* 
  * ----------------------------
  * Product Details
@@ -758,6 +766,11 @@ a.primary-btn:hover{
 
 .active-link {
   font-weight: bold;
+}
+
+.nav {
+    position: absolute;
+
 }
 
 /* 
@@ -1040,4 +1053,42 @@ footer ul li{
         border:0;
         padding:8px 0
     }
+}
+
+.menu-sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    margin-bottom: 100px;
+}
+
+.page-wrapper {
+    margin-bottom: 100px;
+}
+
+.content {
+    margin-left: 200px;
+}
+
+
+.saved-restaurant-card {
+    display: flex;
+    flex-direction: row;
+    height: 160px;
+    border: solid black;
+    margin: 40px;
+}
+
+.saved-thumbnail {
+    margin-right: 20px;
+}
+
+.saved-restaurant-info {
+    height: inherit;
+}
+
+.saved-restaurant-list {
+    list-style: none;
 }

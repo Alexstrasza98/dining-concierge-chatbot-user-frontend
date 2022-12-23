@@ -1,59 +1,80 @@
-<div class="page-wrapper">
+<div class="page">
+  <div class="page-wrapper">
 
 
-  <!-- MENU SIDEBAR-->
-  <aside class="menu-sidebar d-none d-lg-block">
-    <div class="logo">
-      <a routerLink="/products">
-        <img src="assets/images/logo.jpeg" alt="luv2shop" class="img-responsive">
-      </a>
+    <!-- MENU SIDEBAR-->
+    <aside class="menu-sidebar d-none d-lg-block">
+      <div class="logo">
+        <a routerLink="/products">
+          <img src="assets/images/logo.jpeg" alt="luv2shop" class="img-responsive">
+        </a>
+      </div>
+
+      <div class="nav">
+        <ul>
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Saved</a></li>
+          <li><a href="#">Reserved</a></li>
+        </ul>
+      </div>
+
+    </aside>
+    <!-- END MENU SIDEBAR-->
+
+    <div class="page-container">
+      <!-- HEADER DESKTOP-->
+      <header class="header-desktop">
+        <div class="section-content section-content-p30">
+          <div class="container-fluid">
+            <div class="header-wrap">
+
+              <app-login-status></app-login-status>
+
+            </div>
+            <div class="account-wrap"></div>
+          </div>
+
+        </div>
+      </header>
+      <!-- END HEADER DESKTOP-->
+
+      <!-- MAIN CONTENT-->
+
+
+
+      <router-outlet></router-outlet>
+
     </div>
 
-
-  </aside>
-  <!-- END MENU SIDEBAR-->
-
-  <div class="page-container">
-    <!-- HEADER DESKTOP-->
-    <header class="header-desktop">
-      <div class="section-content section-content-p30">
-        <div class="container-fluid">
-          <div class="header-wrap">
-
-
- 
-            <app-login-status></app-login-status>
-
-            
-            
-          </div>
-          <div class="account-wrap"></div>
-        </div>
-        
-      </div>
-    </header>
-    <!-- END HEADER DESKTOP-->
-    
-    <!-- MAIN CONTENT-->
-    
-    <router-outlet></router-outlet>
-    
   </div>
-  
+
+  <div class="content">
+    <div class="saved-title">
+      <h1>Saved Restaurants</h1>
+    </div>
+    <ul class="saved-restaurant-list">
+      <li class="saved-restaurant-item">
+        <div class="saved-restaurant-card">
+          <img src="{{saveResult.image_url}}" class="saved-thumbnail">
+          <div class="saved-restaurant-info">
+            <h2>{{saveResult.name}}</h2>
+            <p>Location: {{saveResult.location}}</p>
+            <p>Rating: {{saveResult.rate}}/5</p>
+            <p>Price: {{saveResult.price}}</p>
+          </div>
+        </div>
+      </li>
+
+    </ul>
+
+
+  </div>
 </div>
 
 
-<!-- ENDS PAGE CONTAINER -->
 
 
-<footer>
-  <ul>
-    <li><a href="#">Profile</a></li>
-    <li><a href="#">Favorite</a></li>
-    <li><a href="#">Reserved</a></li>
-    <li><a href="#"> {{saveResult}} </a></li>
-  </ul>
-</footer>
+
 
 
 
