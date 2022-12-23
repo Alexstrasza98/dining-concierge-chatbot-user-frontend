@@ -1,0 +1,20 @@
+<div class="content">
+    <div class="saved-title">
+        <h1>Reservations</h1>
+    </div>
+    <ul class="saved-restaurant-list">
+        <li class="saved-restaurant-item" *ngFor="let saveResult of ReservationList">
+            <div class="saved-restaurant-card">
+                <img src="{{saveResult.image_url}}" class="saved-thumbnail">
+                <div class="saved-restaurant-info">
+                    <h2>{{saveResult.name}}</h2>
+                    <p>Location: {{saveResult.location}}</p>
+                    <p>People: {{saveResult.people}}</p>
+                    <p>Reservation Time: {{saveResult.dt}}</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+
+</div>
